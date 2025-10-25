@@ -12,34 +12,47 @@ namespace P_web_core.Controllers
         {
             _logger = logger;
         }
-
+        [HttpGet]
         public IActionResult Index()
         {
             return View();
         }
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
+        [HttpGet]
         public IActionResult Registro()
         {
             return View();
         }
+
+        [HttpGet]
         public IActionResult RecuperarAcceso()
         {
             return View();
         }
+
+
         public IActionResult Principal()
         {
             return View();
         }
 
+        [HttpPost]
+        public IActionResult Index(UsuarioModel usuario)
+        {
+
+            return View();
+        }
+        [HttpPost]
+        public IActionResult Registro(UsuarioModel usuario)
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult RecuperarAcceso(UsuarioModel usuario)
+        {
+            return View();
+        }
     }
 }
