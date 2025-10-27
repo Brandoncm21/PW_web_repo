@@ -11,25 +11,25 @@
                 <div class="card col-lg-4 mx-auto">
                     <div class="card-body px-5 py-5">
                         <h3 class="card-title text-left mb-3">Register</h3>
-                        <form asp-action="Registro" asp-controller="Home">
+                        <!-- Formulario con validación -->
+                        <form id="FormRegistro" asp-action="Registro" asp-controller="Home">
                             <div class="form-group">
-                                <label>Nombre</label>
-                                <input type="text" class="form-control p_input" asp-for="Nombre" placeholder="Introduce tu nombre">
+                                <label for="Nombre">Nombre</label>
+                                <input type="text" id="Nombre" class="form-control p_input" asp-for="Nombre" placeholder="Introduce tu nombre">
                             </div>
                             <div class="form-group">
-                                <label>Identificación</label>
-                                <input type="text" class="form-control p_input" asp-for="Identificacion" placeholder="Introduce tu número de identificación">
+                                <label for="Identificacion">Identificación</label>
+                                <input type="text" id="Identificacion" class="form-control p_input" asp-for="Identificacion" placeholder="Introduce tu número de identificación" onkeyup="ConsultarNombre()">
                             </div>
                             <div class="form-group">
-                                <label>Email</label>
-                                <input type="text" class="form-control p_input" asp-for="CorreoElectronico" placeholder="Introduce tu correo electrónico">
-                              
+                                <label for="CorreoElectronico">Email</label>
+                                <input type="text" id="CorreoElectronico" class="form-control p_input" asp-for="CorreoElectronico" placeholder="Introduce tu correo electrónico">
                             </div>
                             <div class="form-group">
-                                <label>Password</label>
-                                <input type="text" class="form-control p_input" asp-for="Contrasenna">
+                                <label for="Contrasenna">Password</label>
+                                <input type="password" id="Contrasenna" class="form-control p_input" asp-for="Contrasenna" placeholder="Introduce tu contraseña">
                             </div>
-                         
+
                             <div class="text-center">
                                 <button type="submit" class="btn btn-primary btn-block enter-btn">Sign Up</button>
                             </div>
@@ -44,3 +44,4 @@
     </div>
     <!-- page-body-wrapper ends -->
 </div>
+<script src="~/js/Registro.js " asp-append-version="true"></script>

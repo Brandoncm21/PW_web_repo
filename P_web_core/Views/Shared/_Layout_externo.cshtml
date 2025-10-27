@@ -16,7 +16,15 @@
     @RenderBody()
 
     <!-- Cargar jQuery primero -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" asp-append-version="true"></script>
+
+    <!-- Cargar jQuery Validation después de jQuery -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js" asp-append-version="true"></script>
+
+    <!-- Cargar tu archivo JS personalizado -->
+    <script src="~/js/Registro.js" asp-append-version="true"></script>
 
     <!-- Archivos JS -->
     <script src="/js/vendor.bundle.base.js"></script>
@@ -25,5 +33,6 @@
     <script src="/js/misc.js"></script>
     <script src="/js/settings.js"></script>
     <script src="/js/todolist.js"></script>
+
 </body>
 </html>
